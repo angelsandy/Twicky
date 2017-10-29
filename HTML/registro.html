@@ -14,10 +14,31 @@
         <link rel="stylesheet" href="../CSS/main-style.css">
 		<link rel="stylesheet" href="../CSS/form-elements.css">
         <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../CSS/bootstrap-datetimepicker.min.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="../JS/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="../JS/moment.js"></script>
+        <script type="text/javascript" src="../JS/transition.js"></script>
+        <script type="text/javascript" src="../JS/collapse.js"></script>
+        <script type="text/javascript" src="../JS/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../JS/bootstrap-datetimepicker.min.js"></script>
     </head>
 
     <body>
-
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img  class="logo" src="../Images/Logo.png" /></a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </div>
+        </nav>
         <div class= "ad-banner-leader">
             <img src="../Images/adbanner.png"/>
         </div>
@@ -42,30 +63,67 @@
                         	<div class="form-box">
                         		<div class="form-top">
 	                        		<div class="form-top-left">
-	                        			<h3>Registrate</h3>
-	                            		<p>Obten acceso a los mejores cursos y obten un cupón de cortesía en tu primer curso comprado:</p>
+	                        			<h3><strong>¿Necesitas información?</strong></h3>
+	                            		<p>Estamos a tus ordenes,llena el siguiente formulario y te atenderemos en la brevedad posible:</p>
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
 				                    <form role="form" action="" method="post" class="registration-form">
 				                    	<div class="form-group">
 				                    		<label class="sr-only" for="form-first-name">First name</label>
-				                        	<input type="text" name="form-first-name" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
+				                        	<input type="text" name="form-first-name" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name" required>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-last-name">Last name</label>
-				                        	<input type="text" name="form-last-name" placeholder="Apellido Paterno" class="form-last-name form-control" id="form-last-name">
+				                        	<input type="text" name="form-last-name" placeholder="Apellido Paterno" class="form-last-name form-control" id="form-last-name" required>
 				                        </div>
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
-				                        	<input type="text" name="form-email" placeholder="Correo..." class="form-email form-control" id="form-email">
+				                        	<input type="text" name="form-email" placeholder="Correo..." class="form-email form-control" id="form-email" required>
 				                        </div>
+                                          <div class="form-group">
+				                        	<input type="text" name="form-telephone" placeholder="Teléfono..." class="form-telephone form-control" id="form-telephone" required>
+				                        </div>
+                                        <div class="form-group">
+				                        	<select id="products-combo" class="form-control">
+                                                <option>Duda del curso...</option>
+                                            </select>
+				                        </div>
+                                          <div class="form-group" id="container-date">
+                                               <div class='input-group date' id='datetimepicker1'><input type='text' class="form-control" placeholder="Día para contacto..." />
+                                                   <span class="input-group-addon">
+                                                       <span class="glyphicon glyphicon-calendar"></span>
+                                                   </span>
+                                              </div>
+                                              <div class='input-group date' id='datetimepicker3'>
+                                                  <input type='text' class="form-control" placeholder="Hora de contacto..." />
+                                                  <span class="input-group-addon">
+                                                      <span class="glyphicon glyphicon-time"></span>
+                                                  </span>
+                                              </div>
+                                        </div>
+                                              <script type="text/javascript">
+                                                  $(function () {
+                                                      $('#datetimepicker1').datetimepicker();
+                                                  });
+                                                   $(function () {
+                                                       $('#datetimepicker3').datetimepicker({
+                                                           format:'LT'
+                                                       });
+                                                   });
+                                              </script>
 				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
-				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
-				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        	<textarea name="form-about-yourself" placeholder="Describe aquí tu duda...(Máximo 240 caracteres)" class="form-about-yourself form-control" id="form-about-yourself"></textarea>
 				                        </div>
-				                        <button type="submit" class="btn">Sign me up!</button>
+                                           <div class="form-group">
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox2" type="checkbox" required/>
+                                                        <label for="checkbox2">
+                                                            He leído y <a rel= "milenio.com"> <strong>acepto los terminos y condiciones.</strong></a>
+                                                    </label>
+                                               </div>
+                                               </div>
+				                        <button type="submit" class="btn"><strong>¡Entrar!</strong></button>
 				                    </form>
 			                    </div>
                         	</div>
